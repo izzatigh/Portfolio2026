@@ -23,8 +23,8 @@ function App() {
           element={
             <main className="mx-auto flex min-h-[60vh] max-w-copy items-center px-5 py-section text-ink">
               <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-muted">404</p>
-                <h1 className="mt-3 font-display text-4xl">Page not found</h1>
+                <p className="text-sm uppercase tracking-[0.3em] text-accent">404</p>
+                <h1 className="mt-3 font-display text-4xl font-bold">Page not found</h1>
               </div>
             </main>
           }

@@ -16,6 +16,7 @@ export default {
         ink: 'rgb(var(--color-ink) / <alpha-value>)',
         muted: 'rgb(var(--color-muted) / <alpha-value>)',
         accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-alt': 'rgb(var(--color-accent-alt) / <alpha-value>)',
         accentSoft: 'rgb(var(--color-accent-soft) / <alpha-value>)',
         border: 'rgb(var(--color-border) / <alpha-value>)',
       },
@@ -26,16 +27,18 @@ export default {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
-        display: ['var(--font-display)', 'ui-serif', 'Georgia'],
+        display: ['var(--font-display)', 'ui-sans-serif', 'system-ui'],
       },
       maxWidth: {
         copy: '72ch',
       },
       boxShadow: {
-        card: '0 24px 60px rgba(15, 23, 42, 0.08)',
+        card: '0 24px 60px rgba(0, 0, 0, 0.4)',
+        glow: '0 0 20px rgba(0, 212, 255, 0.15)',
+        'glow-lg': '0 0 40px rgba(0, 212, 255, 0.2), 0 0 80px rgba(0, 212, 255, 0.05)',
       },
       borderRadius: {
-        card: '1.5rem',
+        card: '4px',
       },
     },
   },

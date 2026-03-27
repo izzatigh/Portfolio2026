@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 
 const variants = {
-  primary: 'bg-ink text-canvas hover:bg-accent',
-  secondary: 'border border-border bg-surface text-ink hover:border-accent hover:text-accent',
+  primary:
+    'btn-animated-border btn-animated-primary font-semibold hover:shadow-lg',
+  secondary:
+    'btn-animated-border text-ink hover:text-accent',
   ghost: 'text-ink hover:text-accent',
 };
 
 function Button({ to, href, variant = 'primary', className = '', children }) {
-  const classes = `inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition-colors ${variants[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-[4px] px-6 py-3 text-sm font-medium transition-all duration-300 ${variants[variant]} ${className}`;
 
   if (to) {
     return (

@@ -1,13 +1,15 @@
 :root {
-  /* Mirror raw Figma variables here, then map them into Tailwind tokens in tailwind.config.js. */
-  --color-canvas: 247 243 236;
-  --color-surface: 255 251 245;
-  --color-ink: 22 27 31;
-  --color-muted: 104 112 120;
-  --color-accent: 197 102 61;
-  --color-accent-soft: 238 220 209;
-  --color-border: 222 214 205;
+  /* Futuristic dark theme — electric cyan & neon green accents */
+  --color-canvas: 5 5 11;
+  --color-surface: 12 12 22;
+  --color-ink: 240 240 248;
+  --color-muted: 130 134 158;
+  --color-accent: 0 212 255;
+  --color-accent-alt: 0 255 136;
+  --color-accent-soft: 0 212 255;
+  --color-border: 24 24 42;
+  --color-glow: 0 212 255;
 
-  --font-display: 'Clash Display';
-  --font-sans: 'Satoshi';
+  --font-display: 'DM Sans';
+  --font-sans: 'Inter';
 }

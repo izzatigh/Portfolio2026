@@ -10,8 +10,8 @@ function CaseStudyPage({ slug: routeSlug }) {
     return (
       <main className="mx-auto flex min-h-[60vh] max-w-copy items-center px-5 py-section text-ink">
         <div>
-          <p className="text-sm uppercase tracking-[0.3em] text-muted">Missing case study</p>
-          <h1 className="mt-3 font-display text-4xl">Update src/data/caseStudies.js</h1>
+          <p className="text-sm uppercase tracking-[0.3em] text-accent">Missing case study</p>
+          <h1 className="mt-3 font-display text-4xl font-bold">Case study not found</h1>
         </div>
       </main>
     );
