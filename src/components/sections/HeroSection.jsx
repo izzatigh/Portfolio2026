@@ -9,7 +9,7 @@ function HeroSection() {
       <div className="absolute left-1/2 top-20 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-accent/5 blur-[100px]" />
       <Container>
         <div className="max-w-4xl">
-          <p className="text-sm uppercase tracking-[0.36em] text-accent font-medium">UI/UX Designer · Mobile &amp; SaaS</p>
+          <p className="text-sm uppercase tracking-[0.36em] text-accent font-medium">UI/UX Designer · Data-Driven Design · SaaS Specialist</p>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[0.92] tracking-tight text-ink sm:text-6xl lg:text-7xl">
             Crafting intuitive mobile experiences that drive product growth.
           </h1>
@@ -17,10 +17,8 @@ function HeroSection() {
             I’m Izzati — a UI/UX designer who leads end-to-end design for SaaS and e-commerce mobile apps. I turn business goals into clear, user-centered interfaces and present design decisions to stakeholders with confidence.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button to="/about">About me</Button>
-            <Button to="/case-studies/shopflow-mobile" variant="secondary">
-              View case study
-            </Button>
+            <Button href="#contact">Let's Connect</Button>
+            <Button to="/about" variant="secondary">About Me</Button>
           </div>
         </div>
       </Container>

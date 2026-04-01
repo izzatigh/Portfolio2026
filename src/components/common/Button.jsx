@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 const variants = {
   primary:
-    'btn-animated-border btn-animated-primary font-semibold hover:shadow-lg',
+    'bg-accent text-canvas font-semibold hover:bg-accent/80 hover:shadow-[0_0_20px_rgba(0,212,255,0.35)]',
   secondary:
-    'btn-animated-border text-ink hover:text-accent',
+    'border border-accent bg-canvas text-ink hover:bg-accent/10 hover:text-accent',
   ghost: 'text-ink hover:text-accent',
 };
 

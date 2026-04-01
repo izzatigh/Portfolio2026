@@ -3,6 +3,7 @@ import RootLayout from './layouts/RootLayout';
 import AboutPage from './pages/AboutPage';
 import CaseStudyPage from './pages/CaseStudyPage';
 import HomePage from './pages/HomePage';
+import PreviewPage from './pages/PreviewPage';
 import { caseStudies } from './data/caseStudies';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Route element={<RootLayout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/preview" element={<PreviewPage />} />
         {caseStudies.map((caseStudy) => (
           <Route
             key={caseStudy.slug}

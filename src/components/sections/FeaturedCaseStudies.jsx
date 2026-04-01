@@ -4,7 +4,7 @@ import SectionHeading from '../common/SectionHeading';
 
 function FeaturedCaseStudies({ caseStudies }) {
   return (
-    <section className="py-section bg-grid">
+    <section className="py-section bg-grid" id="selected-works">
       <Container>
         <SectionHeading
           eyebrow="Selected Work"

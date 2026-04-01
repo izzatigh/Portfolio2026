@@ -2,7 +2,8 @@ import { caseStudies } from './caseStudies';
 
 export const primaryNavigation = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
+  { label: 'Selected Works', to: '/#selected-works' },
+  { label: 'About Me', to: '/about' },
 ];
 
 export const caseStudyNavigation = caseStudies.map((caseStudy) => ({
