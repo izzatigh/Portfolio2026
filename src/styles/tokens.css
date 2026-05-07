@@ -1,15 +1,15 @@
 :root {
-  /* Futuristic dark theme — electric cyan & neon green accents */
-  --color-canvas: 5 5 11;
-  --color-surface: 12 12 22;
-  --color-ink: 240 240 248;
-  --color-muted: 130 134 158;
-  --color-accent: 0 212 255;
-  --color-accent-alt: 0 255 136;
-  --color-accent-soft: 0 212 255;
-  --color-border: 24 24 42;
-  --color-glow: 0 212 255;
+  /* Retro cream theme — warm beige, forest green & rust red accents */
+  --color-canvas: 239 232 203;      /* #efe8cb — warm cream */
+  --color-surface: 229 218 182;     /* #e5dab6 — slightly deeper cream */
+  --color-ink: 26 23 17;            /* #1a1711 — near-black warm */
+  --color-muted: 107 99 82;         /* #6b6352 — warm medium tone */
+  --color-accent: 77 105 83;        /* #4d6953 — forest green */
+  --color-accent-alt: 201 75 43;    /* #c94b2b — burnt rust red */
+  --color-accent-soft: 100 130 106; /* #64826a — lighter green */
+  --color-border: 204 196 164;      /* #ccc4a4 — warm beige border */
+  --color-glow: 77 105 83;
 
-  --font-display: 'DM Sans';
+  --font-display: 'Inter';
   --font-sans: 'Inter';
 }

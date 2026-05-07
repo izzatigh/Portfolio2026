@@ -2,9 +2,9 @@ import Container from '../common/Container';
 
 function CaseStudyDetail({ caseStudy }) {
   return (
-    <main className="py-section bg-grid">
+    <main className="py-section bg-canvas">
       <Container>
-        <div className="card-futuristic rounded-card border border-border bg-surface p-8 shadow-card sm:p-10">
+        <div className="rounded-card border border-border bg-surface p-8 shadow-card sm:p-10" style={{ boxShadow: '0 4px 24px rgba(26,23,17,0.08)' }}>
           <p className="text-xs uppercase tracking-[0.34em] text-accent font-medium">
             {caseStudy.category} / {caseStudy.year}
           </p>
@@ -35,15 +35,15 @@ function CaseStudyDetail({ caseStudy }) {
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
-          <section className="card-futuristic rounded-card border border-border bg-surface p-7 shadow-card lg:col-span-1">
+          <section className="rounded-card border border-border bg-surface p-7 shadow-card lg:col-span-1" style={{ boxShadow: '0 4px 24px rgba(26,23,17,0.08)' }}>
             <p className="text-xs uppercase tracking-[0.22em] text-accent font-medium">Challenge</p>
             <p className="mt-4 text-sm leading-7 text-muted">{caseStudy.challenge}</p>
           </section>
-          <section className="card-futuristic rounded-card border border-border bg-surface p-7 shadow-card lg:col-span-1">
+          <section className="rounded-card border border-border bg-surface p-7 shadow-card lg:col-span-1" style={{ boxShadow: '0 4px 24px rgba(26,23,17,0.08)' }}>
             <p className="text-xs uppercase tracking-[0.22em] text-accent-alt font-medium">Approach</p>
             <p className="mt-4 text-sm leading-7 text-muted">{caseStudy.approach}</p>
           </section>
-          <section className="card-futuristic rounded-card border border-border bg-surface p-7 shadow-card lg:col-span-1">
+          <section className="rounded-card border border-border bg-surface p-7 shadow-card lg:col-span-1" style={{ boxShadow: '0 4px 24px rgba(26,23,17,0.08)' }}>
             <p className="text-xs uppercase tracking-[0.22em] text-accent-alt font-medium">Impact</p>
             <p className="mt-4 text-sm leading-7 text-muted">{caseStudy.impact}</p>
           </section>

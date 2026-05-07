@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 
 const variants = {
   primary:
-    'bg-accent text-canvas font-semibold hover:bg-accent/80 hover:shadow-[0_0_20px_rgba(0,212,255,0.35)]',
+    'bg-[#4d6953] text-white font-semibold hover:opacity-85',
   secondary:
-    'border border-accent bg-canvas text-ink hover:bg-accent/10 hover:text-accent',
-  ghost: 'text-ink hover:text-accent',
+    'border-2 border-[#324d44] text-[#324d44] hover:bg-[#324d44] hover:text-white',
+  ghost: 'text-ink hover:text-[#4d6953]',
 };
 
 function Button({ to, href, variant = 'primary', className = '', children }) {
-  const classes = `inline-flex items-center justify-center rounded-[4px] px-6 py-3 text-sm font-medium transition-all duration-300 ${variants[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-[8px] px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-200 ${variants[variant]} ${className}`;
 
   if (to) {
     return (

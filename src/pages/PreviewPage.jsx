@@ -62,10 +62,10 @@ function PreviewPage() {
   }
 
   return (
-    <main className="py-10 bg-grid">
+    <main className="py-10 bg-canvas">
       <Container>
         <div className="grid gap-6 xl:grid-cols-[20rem_minmax(0,1fr)]">
-          <aside className="card-futuristic h-fit rounded-card border border-border bg-surface p-6 shadow-card xl:sticky xl:top-24">
+          <aside className="h-fit rounded-card border border-border bg-surface p-6 shadow-card xl:sticky xl:top-24" style={{ boxShadow: '0 4px 24px rgba(26,23,17,0.08)' }}>
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-accent">Component Preview</p>
             <h1 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink">Live section sandbox</h1>
             <p className="mt-4 text-sm leading-7 text-muted">

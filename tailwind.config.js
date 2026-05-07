@@ -19,11 +19,16 @@ export default {
         'accent-alt': 'rgb(var(--color-accent-alt) / <alpha-value>)',
         accentSoft: 'rgb(var(--color-accent-soft) / <alpha-value>)',
         border: 'rgb(var(--color-border) / <alpha-value>)',
+        'retro-green': '#4d6953',
+        'retro-green-dark': '#324d44',
+        'retro-red': '#c94b2b',
+        'retro-cream': '#efe8cb',
+        'retro-cream-dark': '#e5dab6',
       },
       spacing: {
         gutter: 'clamp(1.25rem, 3vw, 2rem)',
         section: 'clamp(4rem, 10vw, 7rem)',
-        hero: 'clamp(5rem, 12vw, 9rem)',
+        hero: 'clamp(4rem, 10vw, 7rem)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
@@ -32,13 +37,16 @@ export default {
       maxWidth: {
         copy: '72ch',
       },
+      letterSpacing: {
+        widest2: '0.2em',
+        widest3: '0.3em',
+      },
       boxShadow: {
-        card: '0 24px 60px rgba(0, 0, 0, 0.4)',
-        glow: '0 0 20px rgba(0, 212, 255, 0.15)',
-        'glow-lg': '0 0 40px rgba(0, 212, 255, 0.2), 0 0 80px rgba(0, 212, 255, 0.05)',
+        card: '0 4px 24px rgba(26, 23, 17, 0.12)',
+        'card-hover': '0 8px 32px rgba(26, 23, 17, 0.18)',
       },
       borderRadius: {
-        card: '4px',
+        card: '8px',
       },
     },
   },
