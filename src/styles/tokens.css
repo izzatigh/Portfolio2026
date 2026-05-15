@@ -1,15 +1,102 @@
-:root {
-  /* Retro cream theme — warm beige, forest green & rust red accents */
-  --color-canvas: 239 232 203;      /* #efe8cb — warm cream */
-  --color-surface: 229 218 182;     /* #e5dab6 — slightly deeper cream */
-  --color-ink: 26 23 17;            /* #1a1711 — near-black warm */
-  --color-muted: 107 99 82;         /* #6b6352 — warm medium tone */
-  --color-accent: 77 105 83;        /* #4d6953 — forest green */
-  --color-accent-alt: 201 75 43;    /* #c94b2b — burnt rust red */
-  --color-accent-soft: 100 130 106; /* #64826a — lighter green */
-  --color-border: 204 196 164;      /* #ccc4a4 — warm beige border */
-  --color-glow: 77 105 83;
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN SYSTEM — VIBES
+   Space-separated RGB values → Tailwind can apply alpha:
+   e.g.  rgb(var(--color-accent) / 0.4)
+   Active vibe is set via data-vibe="[key]" on <html>.
+   ═══════════════════════════════════════════════════════════════ */
 
+/* ── Shared: typography (inherited by all vibes) ─────────────── */
+:root {
   --font-display: 'Inter';
   --font-sans: 'Inter';
+}
+
+/* ─────────────────────────────────────────────────────────────
+   VIBE 1 · "Woodland Harvest"  (default)
+   Mood: Grounded & organic. Warm wheat earth, forest-green CTA,
+         burnt-rust accent. Like a harvest afternoon in the woods.
+   ───────────────────────────────────────────────────────────── */
+:root,
+[data-vibe="woodland-harvest"] {
+  --color-canvas:        220 201 169;  /* #DCC9A9 — warm wheat        */
+  --color-surface:       203 186 150;  /* #CBba96 — deeper wheat       */
+  --color-ink:            26  23  17;  /* #1A1711 — near-black warm    */
+  --color-muted:         107  99  82;  /* #6B6352 — warm mid-tone      */
+  --color-accent:         78 104  81;  /* #4E6851 — forest green (CTA) */
+  --color-accent-alt:    184  49  45;  /* #B8312D — burnt rust         */
+  --color-accent-soft:   122 158 126;  /* #7A9E7E — sage highlight     */
+  --color-accent-deep:    78 104  81;  /* mirrors accent               */
+  --color-border:        196 180 152;  /* #C4B498 — warm border        */
+  --color-glow:           78 104  81;  /* #4E6851                      */
+  /* Contrast — text to place ON top of a given background */
+  --color-text-on-dark:  255 255 255;  /* white on accent/dark bg      */
+  --color-text-on-light:  26  23  17;  /* ink on canvas / light bg     */
+  /* CTA-specific: text sitting directly on --color-accent button */
+  --color-cta-text:      255 255 255;  /* white — accent bg is dark    */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   VIBE 2 · "Terracotta Dusk"
+   Mood: Mediterranean warmth. Dusty blush at golden hour,
+         slate-blue anchors the eye, burnt-orange pops with energy.
+   ───────────────────────────────────────────────────────────── */
+[data-vibe="terracotta-dusk"] {
+  --color-canvas:        232 216 201;  /* #E8D8C9 — dusty blush        */
+  --color-surface:       216 197 176;  /* #D8C5B0 — deeper blush       */
+  --color-ink:            26  20   9;  /* #1A1409 — warm dark          */
+  --color-muted:         122 106  90;  /* #7A6A5A — warm mid           */
+  --color-accent:         75  96 127;  /* #4B607F — slate blue (CTA)   */
+  --color-accent-alt:    243 112  30;  /* #F3701E — burnt orange       */
+  --color-accent-soft:   123 150 181;  /* #7B96B5 — soft steel blue    */
+  --color-accent-deep:    75  96 127;  /* mirrors accent               */
+  --color-border:        205 185 163;  /* #CDB9A3 — blush border       */
+  --color-glow:           75  96 127;  /* #4B607F                      */
+  --color-text-on-dark:  255 255 255;
+  --color-text-on-light:  26  20   9;
+  --color-cta-text:      255 255 255;  /* white — accent bg is dark    */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   VIBE 3 · "Coastal Sands"
+   Mood: Breezy & fresh. Sun-bleached linen shore, teal-water CTA,
+         warm coral that evokes a beach at low tide.
+   ───────────────────────────────────────────────────────────── */
+[data-vibe="coastal-sands"] {
+  --color-canvas:        242 232 209;  /* #F2E8D1 — warm linen         */
+  --color-surface:       229 213 188;  /* #E5D5BC — deeper linen       */
+  --color-ink:            26  20  17;  /* #1A1411 — warm dark          */
+  --color-muted:         122 110  90;  /* #7A6E5A — sandy mid          */
+  --color-accent:         61 160 171;  /* #3DA0AB — teal waters (CTA)  */
+  --color-accent-alt:    221 102  78;  /* #DD664E — terracotta coral   */
+  --color-accent-soft:   125 192 200;  /* #7DC0C8 — light teal         */
+  --color-accent-deep:    61 160 171;  /* mirrors accent               */
+  --color-border:        221 208 184;  /* #DDD0B8 — sand border        */
+  --color-glow:           61 160 171;  /* #3DA0AB                      */
+  --color-text-on-dark:  255 255 255;
+  --color-text-on-light:  26  20  17;
+  --color-cta-text:      255 255 255;  /* white — accent bg is dark    */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   VIBE 4 · "Midnight Gold"
+   Mood: Dark luxe & dramatic. Obsidian canvas, warm-gold CTA
+         gleams against deep navy, punctuated by crimson tension.
+   Contrast note: gold CTA is LIGHT → use text-on-light (dark text).
+   ───────────────────────────────────────────────────────────── */
+[data-vibe="midnight-gold"] {
+  --color-canvas:         26  26  26;  /* #1A1A1A — obsidian           */
+  --color-surface:        37  37  37;  /* #252525 — dark lift          */
+  --color-ink:           239 232 203;  /* #EFE8CB — warm cream         */
+  --color-muted:         176 168 140;  /* #B0A88C — warm grey          */
+  --color-accent:        250 227 173;  /* #FAE3AD — warm gold (CTA)    */
+  --color-accent-alt:    208  35  41;  /* #D02329 — crimson            */
+  --color-accent-soft:   197 176 120;  /* #C5B078 — aged gold          */
+  --color-accent-deep:     4  50  83;  /* #043253 — deep navy          */
+  --color-border:         51  51  51;  /* #333333 — dark border        */
+  --color-glow:          250 227 173;  /* #FAE3AD                      */
+  /* Gold CTA is light → dark text sits on it */
+  --color-text-on-dark:  239 232 203;  /* cream on dark/canvas         */
+  --color-text-on-light:  26  26  26;  /* dark on gold CTA             */
+  /* Gold CTA is light → dark text on the button */
+  --color-cta-text:       26  26  26;  /* dark — accent bg is light    */
 }

@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 const variants = {
   primary:
-    'bg-[#4d6953] text-white font-semibold hover:opacity-85',
+    'bg-accent text-cta-text font-semibold hover:opacity-85',
   secondary:
-    'border-2 border-[#324d44] text-[#324d44] hover:bg-[#324d44] hover:text-white',
-  ghost: 'text-ink hover:text-[#4d6953]',
+    'border-2 border-ink text-ink hover:bg-ink hover:text-canvas',
+  ghost: 'text-ink hover:text-accent',
 };
 
 function Button({ to, href, variant = 'primary', className = '', children }) {

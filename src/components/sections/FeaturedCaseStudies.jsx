@@ -1,11 +1,34 @@
 import { Link } from 'react-router-dom';
 import Container from '../common/Container';
 
-/* Card accent colors cycle: red, green, red+green split */
+/**
+ * Card accent colors use CSS custom properties so they respond to vibe changes.
+ * Card 0: accent-alt bg  (e.g. rust, orange, coral, crimson)
+ * Card 1: accent bg      (e.g. green, slate-blue, teal, gold)
+ * Card 2: ink bg         (dark, always)
+ */
 const CARD_THEMES = [
-  { bg: '#c94b2b', text: '#fff', btnBg: '#1a1711', btnText: '#fff', labelColor: '#fff9' },
-  { bg: '#4d6953', text: '#fff', btnBg: '#c94b2b', btnText: '#fff', labelColor: '#fff9' },
-  { bg: '#1a1711', text: '#fff', btnBg: '#4d6953', btnText: '#fff', labelColor: '#fff9' },
+  {
+    bg: 'rgb(var(--color-accent-alt))',
+    text: 'rgb(var(--color-text-on-dark))',
+    btnBg: 'rgb(var(--color-ink))',
+    btnText: 'rgb(var(--color-canvas))',
+    labelColor: 'rgb(var(--color-text-on-dark) / 0.65)',
+  },
+  {
+    bg: 'rgb(var(--color-accent))',
+    text: 'rgb(var(--color-cta-text))',
+    btnBg: 'rgb(var(--color-accent-alt))',
+    btnText: 'rgb(var(--color-text-on-dark))',
+    labelColor: 'rgb(var(--color-cta-text) / 0.65)',
+  },
+  {
+    bg: 'rgb(var(--color-ink))',
+    text: 'rgb(var(--color-canvas))',
+    btnBg: 'rgb(var(--color-accent))',
+    btnText: 'rgb(var(--color-cta-text))',
+    labelColor: 'rgb(var(--color-canvas) / 0.65)',
+  },
 ];
 
 function CaseStudyCard({ caseStudy, index }) {
@@ -82,8 +105,10 @@ function FeaturedCaseStudies({ caseStudies }) {
             </h2>
           </div>
           <Link
-            className="shrink-0 hidden sm:inline-flex rounded-[6px] border-2 px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all hover:bg-ink hover:text-canvas"
-            style={{ borderColor: '#1a1711', color: '#1a1711', letterSpacing: '0.12em' }}
+            className="shrink-0 hidden sm:inline-flex rounded-[6px] border-2 px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all"
+            style={{ borderColor: 'rgb(var(--color-ink))', color: 'rgb(var(--color-ink))', letterSpacing: '0.12em' }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'rgb(var(--color-ink))'; e.currentTarget.style.color = 'rgb(var(--color-canvas))'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = 'rgb(var(--color-ink))'; }}
             to="/case-studies"
           >
             View All
@@ -99,7 +124,7 @@ function FeaturedCaseStudies({ caseStudies }) {
             {featured[1] && (
               <div
                 className="flex flex-col justify-between rounded-[8px] p-6"
-                style={{ background: '#ddd5b2', border: '1.5px solid #ccc4a4' }}
+                style={{ background: 'rgb(var(--color-surface))', border: '1.5px solid rgb(var(--color-border))' }}
               >
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted">{featured[1].category}</p>
@@ -133,7 +158,7 @@ function FeaturedCaseStudies({ caseStudies }) {
               {/* Left — label/year block */}
               <div
                 className="flex flex-col justify-between rounded-[8px] p-6"
-                style={{ background: '#ddd5b2', border: '1.5px solid #ccc4a4' }}
+                style={{ background: 'rgb(var(--color-surface))', border: '1.5px solid rgb(var(--color-border))' }}
               >
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted">{featured[2].year}</p>
                 <div>
@@ -155,7 +180,7 @@ function FeaturedCaseStudies({ caseStudies }) {
         <div className="mt-8 sm:hidden">
           <Link
             className="inline-flex w-full items-center justify-center rounded-[6px] border-2 py-4 text-xs font-bold uppercase tracking-widest"
-            style={{ borderColor: '#1a1711', color: '#1a1711', letterSpacing: '0.12em' }}
+            style={{ borderColor: 'rgb(var(--color-ink))', color: 'rgb(var(--color-ink))', letterSpacing: '0.12em' }}
             to="/case-studies"
           >
             View All Case Studies

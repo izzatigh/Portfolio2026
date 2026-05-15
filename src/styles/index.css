@@ -33,7 +33,7 @@ img {
 }
 
 ::selection {
-  background: rgba(77, 105, 83, 0.25);
+  background: rgb(var(--color-accent) / 0.25);
   color: rgb(var(--color-ink));
 }
 

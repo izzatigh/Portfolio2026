@@ -4,7 +4,7 @@ import Container from '../common/Container';
 function Sparkle({ className = '' }) {
   return (
     <svg className={className} fill="none" height="28" viewBox="0 0 28 28" width="28" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 0L15.8 12.2L28 14L15.8 15.8L14 28L12.2 15.8L0 14L12.2 12.2L14 0Z" fill="#4d9fac" />
+      <path d="M14 0L15.8 12.2L28 14L15.8 15.8L14 28L12.2 15.8L0 14L12.2 12.2L14 0Z" style={{ fill: 'rgb(var(--color-accent))' }} />
     </svg>
   );
 }
@@ -48,7 +48,7 @@ function RetroComputerIllustration() {
             {/* Surfboard */}
             <div
               className="mx-auto mt-1 rounded-full"
-              style={{ width: 60, height: 8, background: '#c94b2b' }}
+              style={{ width: 60, height: 8, background: 'rgb(var(--color-accent-alt))' }}
             />
           </div>
         </div>
@@ -58,7 +58,7 @@ function RetroComputerIllustration() {
           <div className="w-5 h-2 rounded-[1px] bg-[#2d3d2f]" />
         </div>
         {/* Power LED */}
-        <div className="absolute bottom-4 right-5 w-2 h-2 rounded-full bg-[#c94b2b]" />
+        <div className="absolute bottom-4 right-5 w-2 h-2 rounded-full" style={{ background: 'rgb(var(--color-accent-alt))' }} />
         {/* Speaker dots */}
         <div className="absolute bottom-3 right-10 grid grid-cols-3 gap-[2px]">
           {Array.from({ length: 9 }).map((_, i) => (
@@ -89,14 +89,14 @@ function HeroSection() {
               {/* Mouse cursor badge — bottom right */}
               <div className="absolute -bottom-2 right-4 lg:right-8">
                 <div
-                  className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#4d6953]"
-                  style={{ background: '#c8d4b0' }}
+                  className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent"
+                  style={{ background: 'rgb(var(--color-surface))' }}
                 >
                   <svg fill="none" height="26" viewBox="0 0 26 34" width="26" xmlns="http://www.w3.org/2000/svg">
-                    <rect fill="#4d6953" height="20" rx="7" width="14" x="6" y="2" />
-                    <rect fill="#c94b2b" height="9" rx="3.5" width="7" x="6" y="2" />
-                    <line stroke="#c8d4b0" strokeWidth="1.5" x1="13" x2="13" y1="2" y2="9" />
-                    <line stroke="#4d6953" strokeWidth="1.5" x1="6" x2="14" y1="24" y2="30" />
+                    <rect style={{ fill: 'rgb(var(--color-accent))' }} height="20" rx="7" width="14" x="6" y="2" />
+                    <rect style={{ fill: 'rgb(var(--color-accent-alt))' }} height="9" rx="3.5" width="7" x="6" y="2" />
+                    <line stroke="rgb(var(--color-canvas))" strokeWidth="1.5" x1="13" x2="13" y1="2" y2="9" />
+                    <line style={{ stroke: 'rgb(var(--color-accent))' }} strokeWidth="1.5" x1="6" x2="14" y1="24" y2="30" />
                   </svg>
                 </div>
               </div>
@@ -121,16 +121,18 @@ function HeroSection() {
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  className="inline-flex items-center justify-center rounded-[8px] px-10 py-5 font-bold uppercase text-white transition-opacity hover:opacity-85 active:opacity-70"
+                  className="inline-flex items-center justify-center rounded-[8px] px-10 py-5 font-bold uppercase transition-opacity hover:opacity-85 active:opacity-70"
                   href="#contact"
-                  style={{ background: '#4d6953', letterSpacing: '0.1em', fontSize: '0.875rem' }}
+                  style={{ background: 'rgb(var(--color-accent))', color: 'rgb(var(--color-cta-text))', letterSpacing: '0.1em', fontSize: '0.875rem' }}
                 >
                   Hire Me
                 </a>
                 <a
-                  className="inline-flex items-center justify-center rounded-[8px] border-2 px-8 py-5 font-bold uppercase transition-all hover:bg-[#324d44] hover:text-white active:bg-[#2a4038]"
+                  className="inline-flex items-center justify-center rounded-[8px] border-2 px-8 py-5 font-bold uppercase transition-all"
                   href="/about"
-                  style={{ borderColor: '#324d44', color: '#324d44', letterSpacing: '0.1em', fontSize: '0.875rem' }}
+                  style={{ borderColor: 'rgb(var(--color-ink))', color: 'rgb(var(--color-ink))', letterSpacing: '0.1em', fontSize: '0.875rem' }}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'rgb(var(--color-ink))'; e.currentTarget.style.color = 'rgb(var(--color-canvas))'; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = 'rgb(var(--color-ink))'; }}
                 >
                   View Profile
                 </a>
@@ -148,7 +150,7 @@ function HeroSection() {
               <div
                 className="flex flex-1 items-center justify-center rounded-[6px] py-4 text-xs font-bold uppercase tracking-widest text-muted"
                 key={skill}
-                style={{ minWidth: 110, background: '#ddd5b2', border: '1.5px solid #ccc4a4' }}
+                style={{ minWidth: 110, background: 'rgb(var(--color-surface))', border: '1.5px solid rgb(var(--color-border))' }}
               >
                 {skill}
               </div>
