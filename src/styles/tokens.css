@@ -7,7 +7,7 @@
 
 /* ── Shared: typography (inherited by all vibes) ─────────────── */
 :root {
-  --font-display: 'Inter';
+  --font-display: 'Poppins';
   --font-sans: 'Inter';
 }
 

@@ -31,8 +31,8 @@ export default {
         hero: 'clamp(4rem, 10vw, 7rem)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
-        display: ['var(--font-display)', 'ui-sans-serif', 'system-ui'],
+        display: ['"Poppins"', 'sans-serif'],
+        sans: ['"Inter"', 'ui-sans-serif', 'system-ui'],
       },
       maxWidth: {
         copy: '72ch',

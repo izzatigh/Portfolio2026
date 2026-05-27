@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Portfolio2026 Agentic Design System",
+  "description": "Unified source of truth mapping Figma styles to Vibe-driven Tailwind tokens, Poppins/Inter typography, and Shared Components.",
+  "tokens": {
+
+    "//1": "========================================",
+    "//2": " SEMANTIC COLORS (Vibe-Agnostic Engine)",
+    "//3": "========================================",
+
+    "color/semantic/canvas": {
+      "intent": "Page background base layer",
+      "tailwindClasses": "bg-canvas",
+      "useFor": ["Main page background", "Full-width section backgrounds"]
+    },
+    "color/semantic/surface": {
+      "intent": "Elevated panels and cards",
+      "tailwindClasses": "bg-surface",
+      "useFor": ["Cards", "Dropdown menus", "Floating panels"]
+    },
+    "color/semantic/ink": {
+      "intent": "Primary text and prominent icons",
+      "tailwindClasses": "text-ink border-ink",
+      "useFor": ["Standard body copy", "Headings", "Primary outlines"]
+    },
+    "color/semantic/muted": {
+      "intent": "Secondary text and micro-copy",
+      "tailwindClasses": "text-muted",
+      "useFor": ["Eyebrows", "Captions", "Footers"]
+    },
+    "color/semantic/accent": {
+      "intent": "Primary action color and prominent focus",
+      "tailwindClasses": "text-accent bg-accent border-accent",
+      "useFor": ["Active states", "Text selection highlight (25% opacity)", "Primary buttons"]
+    },
+    "color/semantic/accent-alt": {
+      "intent": "Secondary accent or data highlight",
+      "tailwindClasses": "text-accent-alt bg-accent-alt",
+      "useFor": [".metric-value elements", "Secondary chart data", "Supporting illustrations"]
+    },
+    "color/semantic/border": {
+      "intent": "Subtle structural separation",
+      "tailwindClasses": "border-border",
+      "useFor": ["Card borders", "Dividers", "Nav bottom border"]
+    },
+    "color/semantic/cta-text": {
+      "intent": "Text placed inside primary accent buttons",
+      "tailwindClasses": "text-cta-text",
+      "useFor": ["Text inside primary buttons only"],
+      "avoidFor": ["Standard page text (contrast will fail depending on the vibe)"]
+    },
+
+    "//4": "========================================",
+    "//5": " TYPOGRAPHY RULES (Poppins + Inter)",
+    "//6": "========================================",
+
+    "text/Header": {
+      "intent": "Top-level page titles and major section headers (64px)",
+      "tailwindClasses": "font-display text-[64px] font-bold leading-tight uppercase",
+      "htmlElement": "h1",
+      "useFor": ["Hero sections", "Main page headers"]
+    },
+    "text/Subtitle": {
+      "intent": "Secondary section titles (32px)",
+      "tailwindClasses": "font-display text-[32px] font-semibold leading-snug uppercase",
+      "htmlElement": "h2",
+      "useFor": ["Major content sections", "Large callouts"]
+    },
+    "text/Card Title": {
+      "intent": "Titles inside elevated surfaces (24px)",
+      "tailwindClasses": "font-display text-[24px] font-semibold leading-snug",
+      "htmlElement": "h3",
+      "useFor": ["Case study card titles", "Feature blocks"]
+    },
+    "text/Normal Text": {
+      "intent": "Standard readable paragraph text (24px)",
+      "tailwindClasses": "font-sans text-[24px] font-normal leading-relaxed",
+      "htmlElement": "p",
+      "structureRules": "Limit width using the 'max-w-copy' (72ch) class to ensure the large 24px text remains comfortable to read.",
+      "useFor": ["Case study descriptions", "About page body text"]
+    },
+    "text/UI Interactive": {
+      "intent": "Navigation, actions, and prominent UI elements (16px)",
+      "tailwindClasses": "font-sans text-[16px] font-medium tracking-wide",
+      "htmlElement": "span",
+      "useFor": ["Nav bar menus", "CTAs", "Chips", "Text accompanied by icons"]
+    },
+    "text/Micro Copy": {
+      "intent": "Supporting small text (14px)",
+      "tailwindClasses": "font-sans text-[14px] font-normal text-muted",
+      "htmlElement": "small",
+      "useFor": ["Eyebrows", "Footers", "Image captions", "Tags"]
+    },
+
+    "//7": "========================================",
+    "//8": " SHARED COMPONENT ABSTRACTIONS",
+    "//9": "========================================",
+
+    "component/Button": {
+      "intent": "Standard interactive trigger",
+      "importPath": "import Button from '@/components/common/Button';",
+      "propMapping": {
+        "Figma Variant: Primary": "variant=\"primary\"",
+        "Figma Variant: Secondary": "variant=\"secondary\"",
+        "Figma Variant: Ghost": "variant=\"ghost\""
+      },
+      "structureRules": "Do not manually style buttons with Tailwind classes. Rely on the component's internal styles."
+    },
+    "component/Container": {
+      "intent": "Page width standardizer",
+      "importPath": "import Container from '@/components/common/Container';",
+      "structureRules": "Wrap all page sections in this component to enforce the max-w-6xl layout width."
+    },
+    "component/SectionHeading": {
+      "intent": "Standardized content hierarchy block",
+      "importPath": "import SectionHeading from '@/components/common/SectionHeading';",
+      "propMapping": {
+        "Figma Prop: Eyebrow": "eyebrow=\"...\"",
+        "Figma Prop: Title": "title=\"...\"",
+        "Figma Prop: Description": "description=\"...\"",
+        "Figma Prop: Align Center": "align=\"center\""
+      }
+    }
+  }
+}
