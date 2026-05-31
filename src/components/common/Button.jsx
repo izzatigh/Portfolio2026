@@ -9,7 +9,7 @@ const variants = {
 };
 
 function Button({ to, href, variant = 'primary', className = '', children }) {
-  const classes = `inline-flex items-center justify-center rounded-[8px] px-8 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-200 ${variants[variant]} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-[8px] px-8 py-4 text-xs font-bold tracking-wide transition-all duration-200 ${variants[variant]} ${className}`;
 
   if (to) {
     return (

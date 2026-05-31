@@ -95,7 +95,7 @@ function GetToKnowSection() {
               Get to Know
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Mid-level UI/UX designer with a bias for business impact — designing products people love, that ship.
+              UI/UX Developer — designing at speed and building it in code.
             </p>
           </div>
 
@@ -211,7 +211,7 @@ function GetToKnowSection() {
                   className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em]"
                   style={{ color: 'rgb(var(--color-text-on-dark) / 0.65)' }}
                 >
-                  UI/UX Designer
+                  UI/UX Developer
                 </p>
                 <Link
                   to="/about"

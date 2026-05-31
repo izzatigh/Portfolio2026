@@ -18,15 +18,15 @@
    ───────────────────────────────────────────────────────────── */
 :root,
 [data-vibe="woodland-harvest"] {
-  --color-canvas:        220 201 169;  /* #DCC9A9 — warm wheat        */
-  --color-surface:       203 186 150;  /* #CBba96 — deeper wheat       */
+  --color-canvas:        249 249 249;  /* #F9F9F9 — clean white        */
+  --color-surface:       240 238 234;  /* #F0EEEa — warm off-white     */
   --color-ink:            26  23  17;  /* #1A1711 — near-black warm    */
   --color-muted:         107  99  82;  /* #6B6352 — warm mid-tone      */
   --color-accent:         78 104  81;  /* #4E6851 — forest green (CTA) */
   --color-accent-alt:    184  49  45;  /* #B8312D — burnt rust         */
   --color-accent-soft:   122 158 126;  /* #7A9E7E — sage highlight     */
   --color-accent-deep:    78 104  81;  /* mirrors accent               */
-  --color-border:        196 180 152;  /* #C4B498 — warm border        */
+  --color-border:        226 222 216;  /* #E2DED8 — warm light border  */
   --color-glow:           78 104  81;  /* #4E6851                      */
   /* Contrast — text to place ON top of a given background */
   --color-text-on-dark:  255 255 255;  /* white on accent/dark bg      */

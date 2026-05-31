@@ -5,7 +5,7 @@ import { primaryNavigation } from '../../data/navigation';
 
 function getNavClasses({ isActive }) {
   return [
-    'font-bold uppercase tracking-widest text-xs transition-colors hover:text-accent',
+    'font-bold tracking-wide text-xs transition-colors hover:text-accent',
     isActive ? 'text-accent' : 'text-ink',
   ].join(' ');
 }

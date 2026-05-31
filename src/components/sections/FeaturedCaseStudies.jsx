@@ -53,7 +53,7 @@ function CaseStudyCard({ caseStudy, index }) {
           justifyContent: 'center',
         }}
       >
-        <span className="text-[11px] font-bold uppercase tracking-[0.2em]" style={{ color: theme.labelColor }}>
+        <span className="text-[11px] font-bold tracking-[0.06em]" style={{ color: theme.labelColor }}>
           {caseStudy.category}
         </span>
       </div>
@@ -61,18 +61,18 @@ function CaseStudyCard({ caseStudy, index }) {
       {/* Content */}
       <div className="flex items-end justify-between gap-4 p-6">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: theme.labelColor }}>
+          <p className="text-xs font-bold tracking-[0.04em]" style={{ color: theme.labelColor }}>
             {caseStudy.role}
           </p>
           <h3
-            className="mt-2 font-display font-bold uppercase leading-snug"
+            className="mt-2 font-display font-bold leading-snug"
             style={{ color: theme.text, fontSize: 'clamp(1.1rem, 2vw, 1.35rem)', letterSpacing: '0.06em' }}
           >
             {caseStudy.title}
           </h3>
         </div>
         <div
-          className="shrink-0 rounded-[6px] px-5 py-3 text-xs font-bold uppercase tracking-widest transition-opacity hover:opacity-80"
+          className="shrink-0 rounded-[6px] px-5 py-3 text-xs font-bold transition-opacity hover:opacity-80"
           style={{ background: theme.btnBg, color: theme.btnText, letterSpacing: '0.12em' }}
         >
           Open
@@ -92,20 +92,20 @@ function FeaturedCaseStudies({ caseStudies }) {
         <div className="mb-10 flex items-end justify-between gap-6">
           <div>
             <p
-              className="font-bold uppercase text-muted"
+              className="font-bold text-muted"
               style={{ fontSize: '0.75rem', letterSpacing: '0.28em' }}
             >
               Selected Work
             </p>
             <h2
-              className="mt-2 font-display font-bold uppercase text-ink"
+              className="mt-2 font-display font-bold text-ink"
               style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', letterSpacing: '0.1em' }}
             >
               Featured Case Studies
             </h2>
           </div>
           <Link
-            className="shrink-0 hidden sm:inline-flex rounded-[6px] border-2 px-6 py-3 text-xs font-bold uppercase tracking-widest transition-all"
+            className="shrink-0 hidden sm:inline-flex rounded-[6px] border-2 px-6 py-3 text-xs font-bold transition-all"
             style={{ borderColor: 'rgb(var(--color-ink))', color: 'rgb(var(--color-ink))', letterSpacing: '0.12em' }}
             onMouseEnter={e => { e.currentTarget.style.background = 'rgb(var(--color-ink))'; e.currentTarget.style.color = 'rgb(var(--color-canvas))'; }}
             onMouseLeave={e => { e.currentTarget.style.background = ''; e.currentTarget.style.color = 'rgb(var(--color-ink))'; }}
@@ -127,9 +127,9 @@ function FeaturedCaseStudies({ caseStudies }) {
                 style={{ background: 'rgb(var(--color-surface))', border: '1.5px solid rgb(var(--color-border))' }}
               >
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted">{featured[1].category}</p>
+                  <p className="text-xs font-bold tracking-[0.04em] text-muted">{featured[1].category}</p>
                   <h3
-                    className="mt-3 font-display font-bold uppercase leading-snug text-ink"
+                    className="mt-3 font-display font-bold leading-snug text-ink"
                     style={{ fontSize: 'clamp(1.1rem, 2vw, 1.35rem)', letterSpacing: '0.06em' }}
                   >
                     {featured[1].title}
@@ -137,7 +137,7 @@ function FeaturedCaseStudies({ caseStudies }) {
                   <p className="mt-3 text-sm leading-relaxed text-muted">{featured[1].summary}</p>
                 </div>
                 <Link
-                  className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ink transition-opacity hover:opacity-60"
+                  className="mt-6 inline-flex items-center gap-2 text-xs font-bold text-ink transition-opacity hover:opacity-60"
                   style={{ letterSpacing: '0.12em' }}
                   to={`/case-studies/${featured[1].slug}`}
                 >
@@ -160,11 +160,11 @@ function FeaturedCaseStudies({ caseStudies }) {
                 className="flex flex-col justify-between rounded-[8px] p-6"
                 style={{ background: 'rgb(var(--color-surface))', border: '1.5px solid rgb(var(--color-border))' }}
               >
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted">{featured[2].year}</p>
+                <p className="text-xs font-bold tracking-[0.04em] text-muted">{featured[2].year}</p>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted">{featured[2].category}</p>
+                  <p className="text-xs font-bold tracking-[0.04em] text-muted">{featured[2].category}</p>
                   <h3
-                    className="mt-2 font-display font-bold uppercase leading-snug text-ink"
+                    className="mt-2 font-display font-bold leading-snug text-ink"
                     style={{ fontSize: 'clamp(1.1rem, 2vw, 1.35rem)', letterSpacing: '0.06em' }}
                   >
                     {featured[2].title}
@@ -179,7 +179,7 @@ function FeaturedCaseStudies({ caseStudies }) {
         {/* Mobile view all */}
         <div className="mt-8 sm:hidden">
           <Link
-            className="inline-flex w-full items-center justify-center rounded-[6px] border-2 py-4 text-xs font-bold uppercase tracking-widest"
+            className="inline-flex w-full items-center justify-center rounded-[6px] border-2 py-4 text-xs font-bold"
             style={{ borderColor: 'rgb(var(--color-ink))', color: 'rgb(var(--color-ink))', letterSpacing: '0.12em' }}
             to="/case-studies"
           >

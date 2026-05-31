@@ -115,20 +115,20 @@ function HeroSection() {
                   className="mt-2 font-display font-bold uppercase leading-[1.05] text-ink"
                   style={{ fontSize: 'clamp(2rem, 4.5vw, 3rem)', letterSpacing: '0.16em' }}
                 >
-                  A Product Designer
+                  A UI/UX Developer
                 </h1>
               </div>
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  className="inline-flex items-center justify-center rounded-[8px] px-10 py-5 font-bold uppercase transition-opacity hover:opacity-85 active:opacity-70"
+                  className="inline-flex flex-1 items-center justify-center rounded-[8px] px-10 py-5 font-bold transition-opacity hover:opacity-85 active:opacity-70"
                   href="#contact"
                   style={{ background: 'rgb(var(--color-accent))', color: 'rgb(var(--color-cta-text))', letterSpacing: '0.1em', fontSize: '0.875rem' }}
                 >
                   Hire Me
                 </a>
                 <a
-                  className="inline-flex items-center justify-center rounded-[8px] border-2 px-8 py-5 font-bold uppercase transition-all"
+                  className="inline-flex flex-1 items-center justify-center rounded-[8px] border-2 px-10 py-5 font-bold transition-all"
                   href="/about"
                   style={{ borderColor: 'rgb(var(--color-ink))', color: 'rgb(var(--color-ink))', letterSpacing: '0.1em', fontSize: '0.875rem' }}
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgb(var(--color-ink))'; e.currentTarget.style.color = 'rgb(var(--color-canvas))'; }}

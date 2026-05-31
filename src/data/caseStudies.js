@@ -1,20 +1,27 @@
+import jetMockUpCover from '../Images/JET mock up.png';
+
 export const caseStudies = [
   {
-    slug: 'shopflow-mobile',
-    title: 'ShopFlow Mobile',
-    category: 'E-Commerce · Mobile App',
-    year: '2025',
+    slug: 'jet-group-ordering',
+    pageBg: '#F9F9F9',
+    title: 'How Group Ordering Feature Simplifies Decision-Making',
+    category: 'Native App · E-Commerce',
+    year: '2023',
     role: 'Lead UI/UX Designer',
     timeline: '10 weeks',
     summary:
-      'Redesigned the mobile shopping experience for an e-commerce platform, improving conversion rates through streamlined checkout and personalized product discovery.',
+      'Designed a native app group ordering experience that helps people decide faster, stay aligned on preferences, and complete shared purchases with less back-and-forth.',
     challenge:
-      'Cart abandonment was high on mobile. Users struggled with a cluttered product browsing experience and a multi-step checkout that felt slow and overwhelming on smaller screens.',
+      'Group orders often broke down in chat threads and screenshots. One person had to collect preferences manually, resolve duplicate picks, and keep everyone updated, which slowed decisions and introduced avoidable mistakes.',
     approach:
-      'I led the redesign end-to-end — conducted user interviews, mapped pain points in the funnel, simplified navigation to two taps from browse to buy, and introduced a single-page checkout with smart defaults.',
+      'I mapped the full decision-making journey from invite to checkout, identified the moments where confusion built up, and designed a shared cart flow with item notes, lightweight voting, and clear status markers so every participant could see what was selected and what still needed a decision.',
     impact:
-      'Mobile checkout completion improved by 28%. User testing showed a significant reduction in task completion time and higher satisfaction scores for the product discovery flow.',
-    tags: ['Mobile UX', 'E-Commerce', 'Checkout Optimization'],
+      'Usability sessions showed faster consensus during shared orders and less confusion about who chose what. The feature turned group purchasing into a clearer, more confident experience instead of a manual coordination task.',
+    tags: ['Native App', 'Mobile UX', 'E-Commerce', 'Group Ordering'],
+    coverImage: jetMockUpCover,
+    coverImageAlt: 'JET group ordering app mockup',
+    coverImageWidth: 792,
+    coverImageHeight: 500,
   },
   {
     slug: 'saaspanel-dashboard',
