@@ -1,6 +1,27 @@
 import jetMockUpCover from '../Images/JET mock up.png';
+import digichatCover from '../Images/Schermafbeelding 2026-05-31 164708.png';
 
 export const caseStudies = [
+  {
+    slug: 'digichat',
+    pageBg: '#F4F6FA',
+    title: 'Digichat — Reimagining Real-Time Messaging',
+    category: 'Web App · Communication',
+    year: '2026',
+    role: 'Lead UI/UX Designer',
+    timeline: '8 weeks',
+    summary:
+      'Designed a real-time messaging platform that prioritises clarity, speed, and meaningful connections — moving beyond cluttered inboxes toward focused, context-aware conversations.',
+    challenge:
+      'Users of existing chat tools struggled with notification overload, lost context in long threads, and unclear conversation hierarchies that made it hard to find the right message at the right time.',
+    approach:
+      'I audited competing platforms, ran diary studies with frequent communicators, and designed a threading model with smart grouping, inline context cards, and a calm notification system that surfaces only what matters.',
+    impact:
+      'Early testing showed a 35% reduction in time spent searching for past messages and a significant drop in reported cognitive load during busy periods. Users described the experience as "finally a chat app that gets out of the way."',
+    tags: ['Web App', 'Messaging UX', 'Design Systems', 'Real-Time'],
+    coverImage: digichatCover,
+    coverImageAlt: 'Digichat messaging platform mockup',
+  },
   {
     slug: 'jet-group-ordering',
     pageBg: '#F9F9F9',

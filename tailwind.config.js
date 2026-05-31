@@ -2,11 +2,23 @@
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
+    screens: {
+      // Mobile-first breakpoints
+      // xs  = 390px  → iPhone 17 (no prefix needed; treat as base/default)
+      sm:  '640px',
+      md:  '768px',   // tablet portrait / landscape mobile
+      lg:  '1024px',  // small laptop
+      xl:  '1280px',  // 1280×800 tablet / small desktop
+      '2xl': '1440px', // primary desktop design target
+      '3xl': '1920px', // large / ultrawide desktop
+    },
     container: {
       center: true,
       padding: {
         DEFAULT: '1.25rem',
-        lg: '2rem',
+        md: '2rem',
+        xl: '3rem',
+        '3xl': '5rem',
       },
     },
     extend: {
